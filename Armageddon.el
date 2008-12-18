@@ -6,4 +6,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-charcoal-black)
+;; (color-theme-charcoal-black)
+(load-file "~/.emacs.d/elpa-to-submit/blackboard.el")
+(color-theme-blackboard)
