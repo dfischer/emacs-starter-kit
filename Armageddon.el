@@ -16,3 +16,35 @@
 ;; without it, you can't highlight text then hit 'del' to remove it.
 (transient-mark-mode 1)
 (delete-selection-mode 1)
+
+
+;; major modes
+(require 'haml-mode)
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+ 
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+ 
+(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
+
+
+;; functions
+
+;; Full screen toggle
+(defun toggle-fullscreen ()
+  (interactive)
+  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+                                           nil
+                                         'fullboth)))
+(global-set-key (kbd "M-RET") 'toggle-fullscreen)
+ 
+;; Keyboard
+ 
+;; Split Windows
+(global-set-key [f6] 'split-window-horizontally)
+(global-set-key [f7] 'split-window-vertically)
+(global-set-key [f8] 'delete-window)
+
+;; Other
+ 
+(prefer-coding-system 'utf-8)
