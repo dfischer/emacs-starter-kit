@@ -2,6 +2,14 @@
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
+;; Snippets
+
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet.el"))
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
+
+
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 (require 'color-theme)

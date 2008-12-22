@@ -4,3 +4,7 @@ backups/*
 places
 /vendor/.DS_Store
 /.DS_Store
+/auto-save-list/.saves-738-God.local~
+/vendor/yasnippet.el/.DS_Store
+/vendor/yasnippet.el/snippets/.DS_Store
+/vendor/yasnippet.el/snippets/text-mode/.DS_Store
