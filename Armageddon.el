@@ -26,6 +26,13 @@
 (delete-selection-mode 1)
 
 
+;; minor modes
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
+(require 'textmate)
+(textmate-mode)
+(require 'whitespace)
+
+
 ;; major modes
 (require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
@@ -37,6 +44,8 @@
 
 
 ;; functions
+;;(require 'line-num)
+;;(turn-on-line-numbers-display 1)
 
 ;; Full screen toggle
 (defun toggle-fullscreen ()
